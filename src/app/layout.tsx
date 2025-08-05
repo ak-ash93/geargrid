@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter, Roboto_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import Navbar from "@/components/Header";
 
 const inter = Inter({
   variable: "--font-inter", // CSS variable you can use
@@ -30,6 +31,7 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={`${inter.variable} ${robotoMono.variable} antialiased`}>
+          <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
         </body>

@@ -7,17 +7,23 @@ import { CiCalendar } from "react-icons/ci";
 import { RiAdminFill } from "react-icons/ri";
 import { IoArrowBackCircle } from "react-icons/io5";
 import { FaSignInAlt } from "react-icons/fa";
+import Image from "next/image";
 
 const Navbar = async ({ isAdminPage = false }) => {
   const isAdmin = false;
 
   return (
-    <header className="fixed top-2 right-0 left-0 max-w-4xl rounded-full mx-auto bg-gradient-to-t from-black to-gray-500 dark:bg-gradient-to-t dark:from-gray-200 dark:to-gray-700 p-5 border-b-1 border-gray-700">
-      <nav className="mx-auto flex items-center justify-between p-2">
-        <Link
-          className=" font-extrabold text-2xl tracking-[3px]  text-gray-200 dark:text-gray-700 cursor-pointer hover:text-gray-400"
-          href={isAdminPage ? "/admin" : "/"}>
-          Gear-Grid
+    <header className="border-b-1 fixed top-0 right-0 left-0 w-full  mx-auto bg-gradient-to-r from-black  to-gray-600 dark:bg-gradient-to-t dark:from-gray-200 dark:to-gray-700 p-2 z-100  border-gray-700">
+      <nav className="mx-auto flex items-center justify-between px-2">
+        <Link href={isAdminPage ? "/admin" : "/"}>
+          <Image
+            src="/logo-r.png"
+            alt="GearGrid Logo"
+            width={85} // Adjust width as needed
+            height={50}
+            priority
+            className="object-cover cursor-pointer"
+          />
         </Link>
         <div className="flex items-center space-x-4">
           {isAdminPage ? (

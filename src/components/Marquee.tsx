@@ -14,7 +14,7 @@ const Marquee = ({ marqueeImages }: MarqueeProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, delay: 1.1, ease: "easeOut" }}
-      className="overflow-hidden">
+      className="overflow-hidden mt-5">
       <FastMarquee
         gradient={false}
         speed={60}

@@ -3,11 +3,17 @@ import CarCards from "@/components/CarCards";
 import { DotBackground } from "@/components/HeroBg";
 import Marquee from "@/components/Marquee";
 import { whyChooseUsList } from "@/lib";
-import { bodyTypes, carMakes, featuredCars } from "@/lib/data";
+import { bodyTypes, carMakes, faqList, featuredCars } from "@/lib/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCar } from "react-icons/fa";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -35,7 +41,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-5 ">
+      {/* Intro section  */}
+      <section className="py-5  ">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +69,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="py-5">
+      {/* Discover by Design section */}
+      <section className="py-5 mt-5">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,6 +99,27 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </motion.div>
+      </section>
+
+      {/* Faq section */}
+      <section className="py-5 mt-5">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 1.4, ease: "easeOut" }}
+          className="container mx-auto px-4 ">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-600 tracking-wider text-center mb-10">
+            Frequently Asked Questions
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faqList.map((faq) => (
+              <AccordionItem key={faq.index} value={`item-${faq.index}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </motion.div>
       </section>
     </div>

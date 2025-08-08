@@ -186,3 +186,36 @@ export const bodyTypes = [
   { id: 3, name: "Convertible", image: "/cars/convertible.webp" },
   { id: 4, name: "Suv", image: "/cars/suv.png" },
 ];
+
+export const faqList = [
+  {
+    index: 1,
+    question: "How do I create an account?",
+    answer:
+      "Creating an account is easy! Click on the Sign Up button, fill in your details, and verify your email to get started.",
+  },
+  {
+    index: 2,
+    question: "Can I list my car for sale on your platform?",
+    answer:
+      "Yes, you can! Simply create an account and follow the steps to list your vehicle with photos and detailed information.",
+  },
+  {
+    index: 3,
+    question: "Is there a fee to buy or sell a car?",
+    answer:
+      "Listing a car is free for sellers. Buyers also pay no fee for browsing or purchasing vehicles through our platform.",
+  },
+  {
+    index: 4,
+    question: "How do I know if a car has a clean history?",
+    answer:
+      "We provide detailed vehicle history reports for most listings, including accident history and service records to ensure transparency.",
+  },
+  {
+    index: 5,
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept various payment methods including credit/debit cards, bank transfers, and financing options through trusted partners.",
+  },
+];

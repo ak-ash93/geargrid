@@ -13,6 +13,17 @@ export type FeaturedCar = {
   wishlisted: boolean;
 };
 
+export type CarMake = {
+  id: number;
+  name: string;
+  image: string;
+};
+export type BodyType = {
+  id: number;
+  name: string;
+  image: string;
+};
+
 export const featuredCars = [
   {
     id: 1,
@@ -154,4 +165,24 @@ export const featuredCars = [
     color: "Black",
     wishlisted: true,
   },
+];
+
+export const carMakes = [
+  { id: 1, name: "Audi", image: "/marquee/audi.jpg" },
+  { id: 2, name: "Bmw", image: "/marquee/bmw-logo.jpeg" },
+  { id: 3, name: "Chevrolet", image: "/marquee/chevrolet-logo.webp" },
+  { id: 4, name: "Lamborghini", image: "/marquee/lamborgini.jpeg" },
+  { id: 5, name: "Mercedes", image: "/marquee/mercedes.webp" },
+  { id: 6, name: "Mustang", image: "/marquee/mustang.png" },
+  { id: 7, name: "Porsche", image: "/marquee/porsche-logo.avif" },
+  { id: 8, name: "Tesla", image: "/marquee/tesla.avif" },
+  { id: 9, name: "Kia", image: "/marquee/kia-logo.jpg" },
+  { id: 10, name: "Toyota", image: "/marquee/toyota-logo.png" },
+];
+
+export const bodyTypes = [
+  { id: 1, name: "Hatchback", image: "/cars/hatchback.webp" },
+  { id: 2, name: "Sedan", image: "/cars/sedan.jpeg" },
+  { id: 3, name: "Convertible", image: "/cars/convertible.webp" },
+  { id: 4, name: "Suv", image: "/cars/suv.png" },
 ];

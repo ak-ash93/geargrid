@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
-import HeroSearch from "../HeroSearch";
+import HeroSearch from "./HeroSearch";
 
 export function DotBackground() {
   return (
@@ -21,7 +21,7 @@ export function DotBackground() {
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2, ease: "easeOut" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           className="relative z-20 gradient bg-clip-text text-transparent text-4xl font-bold tracking-wider sm:text-7xl leading-[1.2] md:leading-[1.3]">
           Find Your Dream Ride <br />
           with{" "}
@@ -34,10 +34,15 @@ export function DotBackground() {
           className="text-center gradient-sub"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}>
+          transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}>
           Shift Into Gear — Your Journey Starts Here.
         </motion.p>
-        <HeroSearch />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}>
+          <HeroSearch />
+        </motion.div>
       </div>
     </div>
   );

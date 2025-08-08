@@ -22,7 +22,7 @@ const Navbar = async ({ isAdminPage = false }) => {
             width={85} // Adjust width as needed
             height={50}
             priority
-            className="object-cover cursor-pointer"
+            className="h-16 w-auto object-contain rounded-lg"
           />
         </Link>
         <div className="flex items-center space-x-4">

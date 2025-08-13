@@ -159,7 +159,7 @@ const HeroSearch: React.FC = () => {
                   disabled={isUploading}
                   type="submit"
                   variant={"default"}
-                  className=" text-xs text-white  rounded-lg  transition-colors mt-2 cursor-pointer">
+                  className=" text-xs bg-gradient-to-br from-gray-800 to-gray-300 text-white hover:bg-gradient-to-bl hover:from-gray-700 hover:to-gray-400  rounded-lg  transition-colors duration-500 ease-in-out mt-2 cursor-pointer">
                   {isUploading ? (
                     <Loader2 className="animate-spin size-4" />
                   ) : (

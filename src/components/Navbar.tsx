@@ -2,7 +2,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
-import { HeartIcon } from "lucide-react";
+import { HeartIcon, UserPlus } from "lucide-react";
 import { CiCalendar } from "react-icons/ci";
 import { RiAdminFill } from "react-icons/ri";
 import { IoArrowBackCircle } from "react-icons/io5";
@@ -61,11 +61,22 @@ const Navbar = async ({ isAdminPage = false }) => {
           )}
           <SignedOut>
             <SignInButton forceRedirectUrl={"/"}>
-              <Button className=" cursor-pointer border-1 border-gray-700 hover:bg-gray-700">
-                <FaSignInAlt className="text-blue-500 mr-.5" />
+              <Button
+                size={"lg"}
+                className=" cursor-pointer border-1 border-gray-700 hover:bg-gray-700">
+                <FaSignInAlt className="text-blue-500 mr-.5 w-5 h-5" />
                 <span className="hidden md:inline">Login</span>
               </Button>
             </SignInButton>
+            <Button
+              size="lg"
+              className="cursor-pointer border-1 border-gray-700 hover:bg-gray-700"
+              asChild>
+              <Link href="/sign-up" className="flex items-center gap-2">
+                <UserPlus className="w-5 h-5 text-blue-500" />
+                <span className="hidden md:inline">Sign Up</span>
+              </Link>
+            </Button>
           </SignedOut>
 
           <SignedIn>

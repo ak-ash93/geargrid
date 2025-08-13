@@ -6,7 +6,7 @@ import HeroSearch from "./HeroSearch";
 
 export function DotBackground() {
   return (
-    <div className="relative flex h-[43rem] md:h-[30rem]  w-full items-center justify-center bg-black">
+    <div className="relative flex h-screen md:h-screen  w-full items-center justify-center bg-black">
       <div
         className={cn(
           "absolute inset-0",
@@ -22,7 +22,7 @@ export function DotBackground() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="relative z-20 gradient bg-clip-text text-transparent text-4xl font-bold tracking-wider sm:text-7xl leading-[1.2] md:leading-[1.3]">
+          className="relative z-20 gradient bg-clip-text text-transparent text-4xl font-bold tracking-wider sm:text-7xl leading-[1.2] md:leading-[1.5] mb-4">
           Find Your Dream Ride <br />
           with{" "}
           <span className="text-white font-extrabold tracking-tight">
@@ -31,7 +31,7 @@ export function DotBackground() {
         </motion.h1>
 
         <motion.p
-          className="text-center gradient-sub"
+          className="text-center gradient-sub mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}>
@@ -40,7 +40,8 @@ export function DotBackground() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}>
+          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
+          className=" w-[80%] md:w-full max-w-md mt-5">
           <HeroSearch />
         </motion.div>
       </div>

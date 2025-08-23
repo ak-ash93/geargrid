@@ -6,7 +6,7 @@ import HeroSearch from "./HeroSearch";
 
 export function DotBackground() {
   return (
-    <div className="relative flex h-screen md:h-screen  w-full items-center justify-center bg-black">
+    <div className="relative flex min-h-screen md:h-screen  w-full items-center justify-center bg-black">
       <div
         className={cn(
           "absolute inset-0",
